@@ -19,7 +19,7 @@ class App extends React.Component {
         <Switch> 
           <Route exact path='/' component={ Home }/>
           <Route exact path='/vinyls/new' component={ VinylFormContainer }/>
-          <Route path='/categories' component={ CategoriesContainer} />
+          <Route path='/categories' component={ CategoriesContainer } />
         </Switch>
       </div>
     );

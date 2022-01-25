@@ -1,15 +1,19 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
+class VinylsContainer extends React.Component {
+    componentDidMount() {
+        console.log(this.props.fetchVinyls)
+        this.props.fetchVinyls();
+    }
 
-const VinylsContainer = (props) => {
-    const { artist, album, year, image_url } = props
-    return ( <div className = "vcontainer" >
-        <h3 > { artist } </h3> 
-        <h3 > { album } </h3> 
-        <h3 > { year } </h3> 
-        <img src = {image_url}/> </div>
-    )
+    render() {
+        return(
+            <div> vinyls
+            <Vinyls />
+            </div>
+        )
+    }
 }
 
-
-export default VinylsContainer
+export default connect(null, { fetchVinyls})(VinylsContainer);
