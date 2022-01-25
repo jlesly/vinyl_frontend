@@ -1,6 +1,7 @@
 import React from "react";
 import { fetchCategories } from '../actions/categoriesActions'
 import { connect } from 'react-redux'
+import Categories from '../components/Categories'
 
 class CategoriesContainer extends React.Component {
 
