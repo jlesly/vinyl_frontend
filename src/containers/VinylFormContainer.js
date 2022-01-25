@@ -1,4 +1,5 @@
 import React from "react";
+import { addVinyl } from '../actions/vinylsActions'
 
 class VinylFormContainer extends React.Component {
     state = {
@@ -43,7 +44,7 @@ class VinylFormContainer extends React.Component {
                     <label>Album Image Link:</label>
                     <input type="text" value={this.state.image_url} onChange={this.handleChange} name="image_url"/>
                     <br/>
-                    
+
                     <label>Category:</label>
 
                     <input type="submit" value="Add to Collection" />
