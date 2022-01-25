@@ -5,7 +5,8 @@ import {connect} from 'react-redux';
 import CategoriesContainer from './containers/CategoriesContainer';
 import { fetchCategories } from './actions/categoriesActions'
 import VinylFormContainer from './containers/VinylFormContainer';
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Home from './components/Home'
 
 
 class App extends React.Component {
