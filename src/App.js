@@ -1,19 +1,26 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import { Switch, Route } from 'react-router-dom'
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import { setVinyls } from './actions/vinylsActions.js'
+import CategoriesContainer from './containers/CategoriesContainer';
+import { fetchCategories } from './actions/categoriesActions'
 
 
-class App extends Component{
-  componentDidMount(){
-    this.props.setVinyls()
+class App extends React.Component {
+  componentDidMount() {
+    this.props.fetchCategories();
   }
-  render () {
+  render() {
     return (
-      <p>Welcome!</p>
-    )
+      <div className='app'>
+        <Switch>
+        
+          <Route path='/categories' component={ CategoriesContainer }/>
+        </Switch>
+      </div>
+    );
   }
 }
 
-export default App;
+export default connect(null, { fetchCategories})(App);
