@@ -1,10 +1,12 @@
 // import logo from './logo.svg';
 import './App.css';
 import { Switch, Route } from 'react-router-dom'
-import React, { Component } from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
 import CategoriesContainer from './containers/CategoriesContainer';
 import { fetchCategories } from './actions/categoriesActions'
+import VinylFormContainer from './containers/VinylFormContainer';
+
 
 
 class App extends React.Component {
@@ -14,10 +16,8 @@ class App extends React.Component {
   render() {
     return (
       <div className='app'>
-        <Switch>
-        
-          <Route path='/categories' component={ CategoriesContainer }/>
-        </Switch>
+       < CategoriesContainer/>
+       <VinylFormContainer/>
       </div>
     );
   }
