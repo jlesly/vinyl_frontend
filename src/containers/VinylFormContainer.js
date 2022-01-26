@@ -1,7 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addVinyl } from '../actions/vinylsActions'
-import { fetchCategories } from '../actions/categoriesActions'
+import { addVinyl } from '../actions/vinylsActions';
+import { fetchCategories } from '../actions/categoriesActions';
+import {Form, Button, Container} from 'react-bootstrap'
 
 class VinylFormContainer extends React.Component {
     state = {
@@ -15,6 +16,7 @@ class VinylFormContainer extends React.Component {
     handleSubmit = e => {
         e.preventDefault();
         this.props.addVinyl(this.state)
+      
     }
 
     handleChange = e => {
@@ -25,42 +27,38 @@ class VinylFormContainer extends React.Component {
     }
 
     render() {
-        {console.log(this.state)}
         return(
-            <div>
-                Add a New Viny!
-
-                <form onSubmit={this.handleSubmit}>
-                    <label>Artist:</label>
-                    <input type="text" value={this.state.artist} onChange={this.handleChange} name="artist"/>
+            <Container>
+                <h1>Add a New Vinyl:</h1>
+                <Form onSubmit={this.handleSubmit}>
+                    <Form.Label>Artist:</Form.Label>
+                    <Form.Control type="text" name="artist" value={this.state.artist} onChange={this.handleChange} required/>
                     <br/>
 
-                    <label>Album:</label>
-                    <input type="text" value={this.state.album} onChange={this.handleChange} name="album"/>
+                    <Form.Label>Album:</Form.Label>
+                    <Form.Control type="text" name="album" value={this.state.album} onChange={this.handleChange} required/>
                     <br/>
 
-                    <label>Year:</label>
-                    <input type="text" value={this.state.year} onChange={this.handleChange} name="year"/>
+                    <Form.Label>Year:</Form.Label>
+                    <Form.Control type="text" name="year" value={this.state.year} onChange={this.handleChange} required/>
                     <br/>
 
-                    <label>Album Image Link:</label>
-                    <input type="text" value={this.state.image_url} onChange={this.handleChange} name="image_url"/>
+                    <Form.Label>Album Image Link:</Form.Label>
+                    <Form.Control type="text" name="image_url" value={this.state.image_url} onChange={this.handleChange} required/>
                     <br/>
 
-                    <label>Category:</label>
+                    <Form.Label>Category:</Form.Label>
 
-                    <input type="submit" value="Add to Collection" />
                     <ul>
-                        <ol><input type="radio" value="Rock" checked={this.state.category_id === "Rock"} onChange={this.handleChange} name="category" /> Rock</ol>
-                        <ol><input type="radio" value="Electronic" checked={this.state.category_id === "Electronic"} onChange={this.handleChange} name="category" /> Electronic</ol>
-                        <ol><input type="radio" value="Hip Hop" checked={this.state.category_id === "Hip Hop"} onChange={this.handleChange} name="category" /> Hip Hop</ol>
-                        <ol><input type="radio" value="Folk" checked={this.state.category_id === "Folk"} onChange={this.handleChange} name="category" /> Folk</ol>
-                        <ol><input type="radio" value="Jazz" checked={this.state.category_id === "Jazz"} onChange={this.handleChange} name="category" /> Jazz</ol>
+                        <ol><input type="radio" value="1" checked={this.state.category_id === "1"} onChange={this.handleChange} name="category_id" /> Rock</ol>
+                        <ol><input type="radio" value="2" checked={this.state.category_id === "2"} onChange={this.handleChange} name="category_id" /> Electronic</ol>
+                        <ol><input type="radio" value="3" checked={this.state.category_id === "3"} onChange={this.handleChange} name="category_id" /> Folk</ol>
+                        <ol><input type="radio" value="4" checked={this.state.category_id === "4"} onChange={this.handleChange} name="category_id" /> Jazz</ol>
+                        <ol><input type="radio" value="5" checked={this.state.category_id === "5"} onChange={this.handleChange} name="category_id" /> Hip Hop</ol>
                     </ul>
-                
-
-                </form>
-            </div>
+                    <Button variant="primary" type="submit">Add to the collection</Button>
+                </Form>
+            </Container>
         )
     }
 

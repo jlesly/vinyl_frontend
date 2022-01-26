@@ -10,7 +10,8 @@ const NavBar = () => {
             <Nav className="me-auto">
             <Nav.Link href="/vinyls/new">Add A Vinyl</Nav.Link>
             <Nav.Link href="/categories">Collection by Genres</Nav.Link>
-            
+    
+
             </Nav>
             </Navbar>
         )
