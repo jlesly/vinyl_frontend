@@ -1,7 +1,7 @@
 import React from 'react';
 import CategoriesContainer from '../containers/CategoriesContainer';
 
-const Home = () {
+const Home = () => {
     return (
         <>
         <div className='home'>

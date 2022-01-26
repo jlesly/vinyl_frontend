@@ -8,7 +8,7 @@ const Categories = ({ categories }) => {
             <h3>Categories List</h3>
             {categories.map(category => <div key={category.id}>
                 <p>
-                    <Link to={'/categories/${category.id}/vinyls'}>
+                    <Link to={`/categories/${category.id}/vinyls`}>
                         <button>{category.name}</button>
                     </Link>
                 </p>

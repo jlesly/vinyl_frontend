@@ -1,5 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { fetchVinyls } from '../actions/vinylsActions';
+import Vinyls from '../components/Vinyls'
 
 class VinylsContainer extends React.Component {
     componentDidMount() {

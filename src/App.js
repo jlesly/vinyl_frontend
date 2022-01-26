@@ -5,8 +5,8 @@ import {connect} from 'react-redux';
 import CategoriesContainer from './containers/CategoriesContainer';
 import { fetchCategories } from './actions/categoriesActions'
 import VinylFormContainer from './containers/VinylFormContainer';
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Home from './components/Home'
+import Home from './components/Home';
+import { Switch, Route} from 'react-router-dom'
 
 
 class App extends React.Component {
@@ -20,7 +20,7 @@ class App extends React.Component {
         <Switch> 
           <Route exact path='/' component={ Home }/>
           <Route exact path='/vinyls/new' component={ VinylFormContainer }/>
-          <Route path='/categories' component={ CategoriesContainer } />
+          <Route path='/categories' component={ CategoriesContainer }/>
         </Switch>
       </div>
     );
