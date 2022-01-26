@@ -1,5 +1,7 @@
 import React from "react";
+import { connect } from "react-redux";
 import { addVinyl } from '../actions/vinylsActions'
+import { fetchCategories } from '../actions/categoriesActions'
 
 class VinylFormContainer extends React.Component {
     state = {
@@ -55,6 +57,7 @@ class VinylFormContainer extends React.Component {
                         <ol><input type="radio" value="Folk" checked={this.state.category_id === "Folk"} onChange={this.handleChange} name="category" /> Folk</ol>
                         <ol><input type="radio" value="Jazz" checked={this.state.category_id === "Jazz"} onChange={this.handleChange} name="category" /> Jazz</ol>
                     </ul>
+                
 
                 </form>
             </div>
@@ -65,5 +68,4 @@ class VinylFormContainer extends React.Component {
 }
 
 
-
-export default VinylFormContainer;
+export default connect(null, { addVinyl, fetchCategories })(VinylFormContainer);

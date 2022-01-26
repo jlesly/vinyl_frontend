@@ -7,6 +7,7 @@ import { fetchCategories } from './actions/categoriesActions'
 import VinylFormContainer from './containers/VinylFormContainer';
 import Home from './components/Home';
 import { Switch, Route} from 'react-router-dom'
+import NavBar from './components/NavBar';
 
 
 class App extends React.Component {
@@ -17,6 +18,7 @@ class App extends React.Component {
   render() {
     return (
       <div className='app'>
+        <NavBar/>
         <Switch> 
           <Route exact path='/' component={ Home }/>
           <Route exact path='/vinyls/new' component={ VinylFormContainer }/>
