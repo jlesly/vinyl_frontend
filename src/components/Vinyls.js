@@ -1,38 +1,35 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { Link } from 'react-router-dom'
+import { Card, Container, ListGroup, ListGroupItem } from 'react-bootstrap'
+
 
 const Vinyls = ({ vinyls, category }) => {
-    const [search, setSearch] = useState("")
     return (
-        <div className='categoryvinyls'>
-
-        <input type="text" className="searchbar" placeholder="Search by artist" 
-        onChange={event => {setSearch(event.target.value)}}/>
-        
-        {vinyls.filter((value)=> {
-            if (search === ""){
-                return value
-        }   else if (value.name.toLowerCase().includes(search.toLowerCase())){
-            return value
-        }
-        }).map(vinylItem => <div key={vinylItem.id}>
-            <br/>
-            <p>
-                <Link to={`/categories/${vinylItem.category_id}/vinyls/${vinylItem.id}`}>
-                    <button>{vinylItem.name}</button>
-                </Link>
-                
-            </p>
-        </div>)}
-    
-    </div>
+        <div className='vinylsforcategory'>
+            <h1>{category.name} Vinyls!</h1>
+            {vinyls.map(vinylCat=> <ul key={vinylCat.id}>
+                <br/>
+            <Container fluid>
+                <Card style={{ width: '18rem'}}>
+                <Link to={`/categories/$vinylCat.category_id}/vinyls/${vinylCat.id}`}></Link>
+                <Card.Img variant="top" src={vinylCat.image_url} alt={`Album cover for ${vinylCat.album}`}/>
+                <Card.Body>
+                    <Card.Title>{vinylCat.artist}</Card.Title>
+                </Card.Body>
+                <ListGroup className="list-group-flush">
+                <ListGroupItem>{vinylCat.album}</ListGroupItem>
+                <ListGroupItem>{vinylCat.year}</ListGroupItem>
+                </ListGroup>
+                </Card>
+            </Container>   
+            </ul>)}
+        </div>
     )
 }
 
-const mapStateToProps= state => {
-    return { vinyls: state.vinyls}
+const mapStateToProps = state => {
+    return { vinyls: state.vinyls }
 }
 
 export default connect(mapStateToProps)(Vinyls);
