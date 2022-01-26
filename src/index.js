@@ -13,18 +13,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
 
-ReactDOM.render( <
-    React.StrictMode >
-    <
-    Provider store = { store } >
-    <
-    Router >
-    <
-    App / >
-    <
-    /Router> <
-    /Provider> <
-    /React.StrictMode>,
+ReactDOM.render( 
+<React.StrictMode>
+    <Provider store = { store } >
+    <Router>
+    <App />
+    </Router> 
+    </Provider> 
+    </React.StrictMode>,
     document.getElementById('root')
 );
 

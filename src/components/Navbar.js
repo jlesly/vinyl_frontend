@@ -1,9 +1,9 @@
 import React from 'react';
-import NavBar from 'react-bootstrap/Navbar'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Navbar,Container, Nav } from 'react-bootstrap'
 
 const NavBar = () => {
-        return(
-            <>            
+        return(       
             <Navbar bg="primary" variant="dark">
             <Container>
             <Navbar.Brand href="/">Home</Navbar.Brand>
@@ -13,7 +13,6 @@ const NavBar = () => {
             </Nav>
             </Container>
             </Navbar>
-            </>
         )
     }
 

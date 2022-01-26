@@ -6,9 +6,9 @@ import CategoriesContainer from './containers/CategoriesContainer';
 import { fetchCategories } from './actions/categoriesActions'
 import VinylFormContainer from './containers/VinylFormContainer';
 import Home from './components/Home';
-import { Switch, Route} from 'react-router-dom'
-import NavBar from './components/NavBar';
-
+import { Switch, Route} from 'react-router-dom';
+import NavBar from './components/NavBar'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component {
   componentDidMount() {
