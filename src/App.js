@@ -17,7 +17,7 @@ class App extends React.Component {
   }
 
   render() {
-    return (
+    return ( 
       <div className='app'>
         <NavBar/>
         <Switch> 

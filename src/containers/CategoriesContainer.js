@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Categories from '../components/Categories';
 import VinylsContainer from "./VinylsContainers";
 import { Route, Switch } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
 
 class CategoriesContainer extends React.Component {
 
@@ -12,7 +13,7 @@ class CategoriesContainer extends React.Component {
     }
     render() {
         return (
-            <div className='categoriescontainer'>
+            <Container>
                 <Switch>
                     <Route path='/categories/:id/vinyls' component={(routeInfo) => {
                         const id = parseInt(routeInfo.match.params.id)
@@ -24,7 +25,7 @@ class CategoriesContainer extends React.Component {
                     <Route exact path='/' component={ Categories } />
                     <Route exact path='/categories' component={ Categories } />
                 </Switch>
-            </div>
+            </Container>
         )
     }
 }

@@ -36,3 +36,15 @@
         transform: rotate(360deg);
     }
 }
+
+.categoriescontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: darkgreen;
+}
+
+.bg--image {
+    height: 40 px;
+    margin-right: 10 px;
+}

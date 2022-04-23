@@ -1,22 +1,26 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Card, Container, Row, Col } from 'react-bootstrap';
 
 const Categories = ({ categories }) => {
     return(
-        <div className='categories'>
-            <h3>Categories List</h3>
-            {categories.map(category => <div key={category.id}>
-                <p>
-                    <Link to={`/categories/${category.id}/vinyls`}>
-                        <button>{category.name}</button>
-                    </Link>
-                </p>
-            </div>
-            )}
-        </div>
-    );
-};
+        <Container fluid>
+        <h1>CLICK A GENRE BELOW</h1>
+        <Row xs={1} md={1} lg={2} xl={6}>    
+            {categories.map(category => 
+            <Col key={category.id} className='d-flex'>
+            <Card border="dark" style={{ width: '36rem'}} className= 'bg-dark text-white text-center'>
+            <Card.Body>
+                <Card.Title>{category.name}</Card.Title>  
+                <Card.Link href={`/categories/${category.id}/vinyls`}>Check it out!</Card.Link> 
+            </Card.Body> 
+            </Card>
+        </Col>)}
+        </Row>
+        </Container>
+    )
+}
+
 
 const mapStateToProps = state => {
     return { categories: state.categories }

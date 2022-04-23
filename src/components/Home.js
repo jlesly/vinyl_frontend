@@ -1,14 +1,15 @@
 import React from 'react';
-import CategoriesContainer from '../containers/CategoriesContainer';
+
+
+
 
 const Home = () => {
-    return (
-        <>
-        <div className='home'>
-        <h1>Welcome to Vinyl17!</h1>
-        <p>Check out the vinyl collection</p>
+    return ( 
+    <>
+        <div className = 'home'>
+        <img src= "/img/Bimage.png" alt="vinyl record" className= "bg--image"/>
         </div>
-        < CategoriesContainer />
+
         </>
     )
 }
