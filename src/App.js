@@ -6,6 +6,7 @@ import CategoriesContainer from './containers/CategoriesContainer';
 import { fetchCategories } from './actions/categoriesActions'
 import VinylFormContainer from './containers/VinylFormContainer';
 import Home from './components/Home';
+import Resources from './components/Resources';
 import { Switch, Route} from 'react-router-dom';
 import NavBar from './components/NavBar'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -24,6 +25,7 @@ class App extends React.Component {
           <Route exact path='/' component={ Home }/>
           <Route exact path='/vinyls/new' component={ VinylFormContainer }/>
           <Route path='/categories' component={ CategoriesContainer }/>
+          <Route path='/resources' component={ Resources }/>
         </Switch>
       
       </div>
