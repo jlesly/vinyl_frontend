@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Resources() {
+const Resources = () => {
     return(
         <div>
             <h2>Resources</h2>

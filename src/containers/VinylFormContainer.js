@@ -4,6 +4,7 @@ import { addVinyl } from '../actions/vinylsActions';
 import { fetchCategories } from '../actions/categoriesActions';
 import {Form, Button, Container} from 'react-bootstrap'
 
+
 class VinylFormContainer extends React.Component {
     state = {
         artist: '',
@@ -29,7 +30,9 @@ class VinylFormContainer extends React.Component {
     render() {
         return(
             <Container>
-                <h1>Add a New Vinyl:</h1>
+                <br></br>
+                <h3>Add a New Vinyl:</h3>
+                <br></br>
                 <Form onSubmit={this.handleSubmit}>
                     <Form.Label>Artist:</Form.Label>
                     <Form.Control type="text" name="artist" value={this.state.artist} onChange={this.handleChange} required/>
@@ -57,6 +60,7 @@ class VinylFormContainer extends React.Component {
                         <ol><input type="radio" value="5" checked={this.state.category_id === "5"} onChange={this.handleChange} name="category_id" /> Hip Hop</ol>
                     </ul>
                     <Button variant="primary" type="submit">Add to the collection</Button>
+                
                 </Form>
             </Container>
         )

@@ -27,7 +27,9 @@ class VinylsContainer extends React.Component {
 }
 
 const mapStateToProps = state => {
-return {categories: state.categories}
+return {
+    categories: state.categories
+}
 }
 
 export default connect(mapStateToProps, { fetchVinyls })(VinylsContainer);

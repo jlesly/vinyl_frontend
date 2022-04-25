@@ -1,12 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Card, Container, Row, Col, ListGroup, ListGroupItem} from 'react-bootstrap'
+import { Link } from 'react-router-dom';
+import DeleteVinyl from './DeleteVinyl';
+
+
 
 
 const Vinyls = ({ vinyls, category }) => {
     return (
+        
         <div className='vinylsforcategory'>
-            <h1>{category.name} Vinyls!</h1>
+            <br></br>
+           
+            <h1>{category.name} Vinyls:</h1>
 
             <Container fluid>
             <Row xs={1} md={2} lg={3} xl={4} className='g-4'>
@@ -23,12 +30,16 @@ const Vinyls = ({ vinyls, category }) => {
                 <ListGroupItem>Album: {vinylCat.album}</ListGroupItem>
                 <ListGroupItem>Released: {vinylCat.year}</ListGroupItem>
                 </ListGroup>
-                            
+                <Link to={`/vinyls/${vinylCat.id}`}>{vinylCat.name}</Link>
+                <br></br>
+                <DeleteVinyl vinylCat={vinylCat}/>     
+                <br></br>      
                 </Card>
                 </Col>)}
             </Row>
-            </Container>   
+            </Container>  
     
+                    
         </div>
     )
 }
