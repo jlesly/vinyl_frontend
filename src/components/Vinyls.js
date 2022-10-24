@@ -4,9 +4,6 @@ import { Card, Container, Row, Col, ListGroup, ListGroupItem} from 'react-bootst
 import { Link } from 'react-router-dom';
 import DeleteVinyl from './DeleteVinyl';
 
-
-
-
 const Vinyls = ({ vinyls, category }) => {
     return (
         

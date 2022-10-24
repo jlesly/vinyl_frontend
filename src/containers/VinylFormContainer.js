@@ -16,15 +16,15 @@ class VinylFormContainer extends React.Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        this.props.addVinyl(this.state)
-      
+        this.props.addVinyl(this.state, this.props.history);
+
     }
 
-    handleChange = e => {
+    handleChange= e => {
         const { name, value } = e.target
         this.setState({
-            [name]: value
-        })
+        [name]: value
+     })
     }
 
     render() {

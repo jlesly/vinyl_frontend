@@ -1,6 +1,36 @@
-[Backend repo](https://github.com/jlesly/vinyl_backend)
 
 
+This application allows a user to keep track of their vinyl record collection. A user can add and delete a vinyl record. Access the backend repo [here](https://github.com/jlesly/vinyl_backend). 
+
+<!---
+🚀 Demo
+--->
+
+# Project Screenshots:
+<img src= "public/img/Vinyl17_home.png" alt="Home Screen" width= "700"> 
+<img src= "public/img/Vinyl17_AddVinyl.png" alt= "Add Vinyl" width= "700">
+<img src= "public/img/Vinyl17_Genres.png" alt= "Genres" width= "700">
+<img src= "public/img/Vinyl17_Collection.png" alt= "Collection" width="700">
+
+
+# 🧐 Features
+- Add/Delete a vinyl record in your collection
+- Browse your collection by genre or artist name
+
+# 🍰 Contribution Guidelines:
+Bug reports and pull requests are welcome on GitHub at https://github.com/jlesly/vinyl_frontend. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/jlesly/vinyl_frontend/blob/master/CODE_OF_CONDUCT.md).
+
+
+# 💻 Built with
+- React.js
+- Bootstrap 
+
+# 🛡️ License:
+This project is licensed under the MIT License
+
+
+# 💖Like my work?
+Please leave a star if you like the project.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

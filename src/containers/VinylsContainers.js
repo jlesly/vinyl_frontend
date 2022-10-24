@@ -4,6 +4,7 @@ import { fetchVinyls } from '../actions/vinylsActions';
 import Vinyls from '../components/Vinyls';
 import { Switch, Route } from 'react-router-dom'
 
+
 class VinylsContainer extends React.Component {
     componentDidMount() {
         console.log(this.props.fetchVinyls)
@@ -17,9 +18,7 @@ class VinylsContainer extends React.Component {
                 <Route exact path='/categories/:id/vinyls' component={(routeInfo) => {
                     return <Vinyls routeInfo={routeInfo} category={this.props.category} vinyls={this.props.vinyls}/>
                 } } />
-
-
-            </Switch>
+            </Switch>   
         </div>
         
     )
